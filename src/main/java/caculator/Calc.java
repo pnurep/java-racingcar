@@ -34,7 +34,7 @@ public class Calc {
         return i1 / i2;
     }
 
-    public static int calc(List<String> input, int acc, String symbol) {
+    private static int calc(List<String> input, int acc, String symbol) {
 
         List<String> temp = input;
 
@@ -82,8 +82,7 @@ public class Calc {
         }
     }
 
-    public static boolean isNumeric(String str)
-    {
+    public static boolean isNumeric(String str) {
         return str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
     }
 

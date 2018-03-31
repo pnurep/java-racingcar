@@ -25,5 +25,16 @@ public class CalcTest {
 
     }
 
+    @Test
+    public void isNumeric() {
+        assertThat(Calc.isNumeric("1")).isEqualTo(true);
+        assertThat(Calc.isNumeric("2")).isEqualTo(true);
+        assertThat(Calc.isNumeric("3")).isEqualTo(true);
+        assertThat(Calc.isNumeric("4")).isEqualTo(true);
 
+        assertThat(Calc.isNumeric("-")).isEqualTo(false);
+        assertThat(Calc.isNumeric("+")).isEqualTo(false);
+        assertThat(Calc.isNumeric("*")).isEqualTo(false);
+        assertThat(Calc.isNumeric("/")).isEqualTo(false);
+    }
 }
